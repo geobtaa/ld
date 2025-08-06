@@ -128,51 +128,6 @@ Schemas work alongside JSON-LD contexts to provide both structural validation an
 }
 ```
 
-## Schema Development
-
-### Creating New Schemas
-
-1. **Follow JSON Schema Draft 7** standards
-2. **Use descriptive `$id`** URIs for canonical identification
-3. **Include comprehensive descriptions** for all properties
-4. **Test with sample data** to ensure validation works correctly
-5. **Document all constraints** and business rules
-
-### Schema Structure
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://geobtaa.org/schemas/example.json",
-  "title": "Example Schema",
-  "description": "Description of what this schema validates",
-  "type": "object",
-  "required": ["field1", "field2"],
-  "properties": {
-    "field1": {
-      "type": "string",
-      "description": "Description of field1",
-      "minLength": 1
-    },
-    "field2": {
-      "type": "number",
-      "description": "Description of field2",
-      "minimum": 0
-    }
-  },
-  "additionalProperties": false
-}
-```
-
-### Best Practices
-
-- **Reuse existing schemas** when possible through `$ref`
-- **Use consistent naming** conventions across all schemas
-- **Provide clear error messages** through descriptive constraints
-- **Test edge cases** thoroughly with various data scenarios
-- **Version schemas** appropriately when making breaking changes
-- **Document all constraints** and their business rationale
-
 ## Schema Registry
 
 All schemas are registered with canonical URIs:
