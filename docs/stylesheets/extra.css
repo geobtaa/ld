@@ -1,0 +1,105 @@
+/* set height of top menu */
+@media (min-width: 76.25em) {
+  .md-header__button.md-logo {
+    position: absolute;
+    top: 0;
+    margin-left: -8rem;
+    margin-top: -.4rem;
+  }
+  .md-header .md-grid {
+    padding-left: 4.8rem;
+  }
+  .md-header__button.md-logo img {
+    height: 4.7rem  !important; /* <-- see comment below */
+    margin: 0;
+    background-color: #163b58;
+    display: block;
+    padding: .75em;
+  }
+  .md-header__title {
+    margin-left: .8rem !important; /* <-- see comment below */
+  }
+  .md-header__topic{
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: -.5rem;
+  }
+}
+.md-grid {
+  max-width: 90%;
+}
+
+/* set color of header and navigation */
+.md-header, .md-tabs, .md-tabs__item { 
+  background-color: #005E8E;
+}
+
+ .md-banner a:link{
+    color:#fff;
+}
+
+.md-tabs, .md-tabs__item { 
+  background-color: #005E8E;
+}
+
+.md-tabs__item{
+/*   border: 1px solid #AAA;   */
+}
+
+.md-tabs__link {
+  color: #fff;
+  opacity: 100;
+  font-size: 1.5em;
+}
+
+.md-tabs__link:hover {
+  color: #B2CCE5;
+}
+
+.md-tabs__link--active {
+  color: #fff;
+  border-bottom: 1px solid
+
+}
+
+
+
+.md-nav__item--section > .md-nav__link[for] {
+    color: inherit;
+}
+   
+.md-typeset h2{
+      color: #000;
+      font-weight: bold;
+      font-size: 1.5em;
+}
+
+.md-typeset h3 {
+      color: #772424;
+      font-weight: bold;
+      font-size: 1.3em;
+      }
+      
+.md-nav__item--section > .md-nav__link[for] {
+    color: #000;
+}
+
+p {
+  font-size: 1.2em; 
+  }
+  
+  li {
+  font-size: 1em; 
+  }
+
+.md-tabs__link  {
+  font-size: 1.65em; 
+  }
+
+/* Hide main nav title */
+label[for="__drawer"] {
+    display: none;
+}
+.md-nav__list>*:first-child {
+    margin-top: 0;
+}

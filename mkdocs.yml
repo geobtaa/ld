@@ -1,0 +1,106 @@
+site_name: GeoBTAA API &amp; Linked Data
+site_description: "GeoBTAA API and linked data assets: contexts, vocabularies, ontologies, etc."
+copyright: "&copy; 2025 GeoBTAA"
+repo_url: https://github.com/geobtaa/ld
+
+theme:
+  name: material
+  font:
+    text: helvetica neue
+    code: "Roboto Mono"
+  features:
+    - navigation.sections
+    - content.tooltips
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - content.code.copy
+  logo: images/btaa-logo-white.png
+  highlightjs: true
+
+plugins:
+  - search
+  - table-reader
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+      - abbr
+      - def_list
+      - footnotes
+      - tables
+      - attr_list
+      - md_in_html
+      - admonition
+      - pymdownx.critic
+      - pymdownx.caret
+      - pymdownx.keys
+      - pymdownx.mark
+      - pymdownx.tilde
+      - pymdownx.details
+      - pymdownx.superfences
+      - pymdownx.snippets
+      - pymdownx.emoji:
+            emoji_index: !!python/name:material.extensions.emoji.twemoji
+            emoji_generator: !!python/name:material.extensions.emoji.to_svg
+            options:
+                  custom_icons:
+                        - overrides/.icons
+      - pymdownx.tabbed:
+            alternate_style: true
+            slugify: !!python/object/apply:pymdownx.slugs.slugify
+                  kwds:
+                        case: lower
+      - toc:
+            toc_depth: 2
+            permalink: true
+      - def_list
+      - pymdownx.tasklist:
+            custom_checkbox: true
+      - pymdownx.snippets:
+            auto_append:
+              - includes/abbreviations.md
+      - admonition
+      - pymdownx.details
+      - pymdownx.magiclink
+      - pymdownx.superfences:
+            custom_fences:
+                  - name: mermaid
+                    class: mermaid
+                    format: !!python/name:pymdownx.superfences.fence_code_format
+                    showSequenceNumbers: true
+                    noteFontWeight: "10px"
+                    actorFontSize: "10px"
+                    messageFontSize: "10px"
+      - pymdownx.tabbed:
+            alternate_style: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/geobtaa/ld
+
+nav:
+- HOME: 'index.md'
+
+- API:
+  - 'Home': 'api/index.md'
+  - 'Standards': 'api/standards.md'
+  - 'Metadata': 'api/metadata.md'
+  - 'Protocol': 'api/protocol.md'
+  - 'Authentication': 'api/authentication.md'
+  - 'Rate Limiting': 'api/rate_limiting.md'
+  - 'Requests': 'api/requests.md'
+  - 'Responses': 'api/responses.md'
+  - 'Parameters': 'api/parameters.md'
+  - 'Model Context Protocol': 'api/model_context_protocol.md'
+  - 'Error Handling': 'api/error_handling.md'
+  - 'Security': 'api/security.md'
+
+- Linked Data:
+    - Contexts: 'linked-data/contexts.md'
+    - Vocabularies: 'linked-data/vocabularies.md'
+    - Ontologies: 'linked-data/ontologies.md'
+    - Schemas: 'linked-data/schemas.md'
+    - Reference: 'linked-data/reference.md'
