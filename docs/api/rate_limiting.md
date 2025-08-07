@@ -1,4 +1,4 @@
-## Rate Limiting Recommendations
+# Rate Limiting Recommendations
 
 Servers **MUST** protect shared resources. The following sane defaults are **RECOMMENDED** and **MAY** be adjusted per deployment:
 

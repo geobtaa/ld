@@ -46,7 +46,19 @@ Example response (abridged):
 
 | Method | Path | Notes |
 | :---- | :---- | :---- |
-| GET | `/resources/{id}` | Returns a single Aardvark record. Supports `fields` param for field projection. |
+| GET | `/resources/{id}` | Returns a single Aardvark record, wrapped in JSON:API frontmatter. Supports `fields` param for field projection. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+
+## Resource OGM Aardvark Retrieval
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/ogm` | Returns a single raw Aardvark record. |
 
 **Parameters**
 
@@ -54,7 +66,21 @@ Example response (abridged):
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
 | `fields` | string (CSV) |  | Subset of fields to include |
-| `pretty` | boolean |  | Pretty‑print JSON (debug only) |
+
+## List Resources
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/` | Returns a list of Aardvark records. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `page` | integer | Current page of results |
+| `per_page` | integer | Number of results to return |
+| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Search
 

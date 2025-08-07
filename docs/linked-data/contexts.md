@@ -67,21 +67,3 @@ For local development, you can reference contexts from the repository:
   "name": "Local Dataset"
 }
 ```
-
-## Creating New Contexts
-
-When creating new contexts:
-
-1. Use clear, descriptive names
-2. Include comprehensive documentation
-3. Follow established naming conventions
-4. Test with sample data
-5. Version appropriately
-
-## Best Practices
-
-- **Reuse existing vocabularies** when possible
-- **Document all custom terms** thoroughly
-- **Use stable URIs** for term definitions
-- **Test contexts** with real data
-- **Version contexts** when making breaking changes 
