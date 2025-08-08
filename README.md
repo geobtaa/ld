@@ -1,6 +1,6 @@
-# GeoBTAA Linked Data
+# GeoBTAA API &amp; Linked Data
 
-GeoBTAA linked data assets: contexts, vocabularies, ontologies, etc.
+This site documents the GeoBTAA Metadata API and our linked data assets: contexts, profiles, and schemas.
 
 ## Documentation
 
@@ -12,7 +12,7 @@ This repository includes comprehensive documentation built with MkDocs. You can:
 
 ## Quick Start
 
-1. Install dependencies: `pip install -r requirements-docs.txt`
+1. Install dependencies: `pip install -r requirements.txt`
 2. Start documentation server: `mkdocs serve`
 3. Open your browser to `http://127.0.0.1:8000/`
 
@@ -21,11 +21,7 @@ This repository includes comprehensive documentation built with MkDocs. You can:
 ```
 ld/
 ├── docs/              # Documentation source files
-├── contexts/          # JSON-LD context files
-├── vocabularies/      # Controlled vocabularies
-├── ontologies/        # Semantic models
-├── schemas/           # JSON Schema definitions
 ├── scripts/           # Validation and utility scripts
 ├── mkdocs.yml         # MkDocs configuration
-└── requirements-docs.txt  # Documentation dependencies
+└── requirements.txt  # Documentation dependencies
 ```
