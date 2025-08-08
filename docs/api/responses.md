@@ -1,5 +1,7 @@
 # Responses
 
+{% include-markdown "includes/wip.md" %}
+
 JSON-LD context for search responses:
 
 * Future: https://opengeometadata/api/search/1.0/context/response.json  
@@ -86,6 +88,7 @@ The META block MAY contain these potential user interface component entries (see
 | Feature | Key(s) | Description | Example Value(s) |
 | :---- | :---- | :---- | :---- |
 | Citation | citation | Generic citation format. String. | {"citation": "\[Creator not found\], (1932). A food map of the United States. https://quod.lib.umich.edu/c/clark1ic/x-003289100/39015091916158 (pictorial map)."} |
+| Data Dictionary | dictionary | CSV | `document_data_dictionary_id,friendlier_id,field_name,field_type,values,definition,definition_source,parent_field_name,position` |
 | Downloads | downloads | Convenience presentation of dct\_references\_s’ downloads. Array of objects. | {"downloads": \[{"label": "Download Shapefile", "url": "https://stacks.stanford.edu/object/cf162mm8787"}\]} |
 | Metadata | metadata | Convenience presentation of dct\_references\_s’ metadata entries. Array of objects. | {"metadata": \[{"label": "ISO 19139", "url": "https://web.s3.wisc.edu/rml-gisdata/metadata/Bayfield\_Trails\_2020.xml"}\]} |
 | Relationships | relationships | Convenience presentation of OGM Aardvark relationship fields. Nested Objects. | {"relationships": { "member\_of": { "links": { "related":     ".../resource/b0153110-e455-4ced-9114-9b13250a7093" }, "data": \[{ "type": "resource", "id": "b0153110-e455-4ced-9114-9b13250a7093"}\]}} |

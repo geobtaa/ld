@@ -1,5 +1,7 @@
 # Requests (Endpoints)
 
+{% include-markdown "includes/wip.md" %}
+
 JSON-LD context for search requests:
 
 * Future: https://opengeometadata/api/search/1.0/context/request.json  

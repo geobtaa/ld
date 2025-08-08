@@ -1,5 +1,7 @@
 # Terminology, Conventions, Standards
 
+{% include-markdown "includes/wip.md" %}
+
 ## Terminology
 
 * **Resource** – An individual OpenGeoMetadata Aardvark \+ GeoBTAA Metadata Profile JSON object, document, item, or record.  

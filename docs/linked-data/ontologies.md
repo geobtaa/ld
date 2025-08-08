@@ -1,5 +1,7 @@
 # Ontologies
 
+{% include-markdown "includes/wip.md" %}
+
 Ontologies define semantic models and relationships for geospatial data, enabling advanced reasoning and discovery capabilities.
 
 ## Overview

@@ -1,5 +1,7 @@
 # Vocabularies
 
+{% include-markdown "includes/wip.md" %}
+
 Controlled vocabularies provide standardized terms and concepts for consistent data classification and discovery.
 
 ## Overview

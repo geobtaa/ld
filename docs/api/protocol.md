@@ -1,5 +1,7 @@
 # Protocol &amp; Versioning
 
+{% include-markdown "includes/wip.md" %}
+
 * API Base URI:  
   * [`https://api.geo.btaa.org/v1`](https://api.geo.btaa.org/v1)  
 * Content types:  

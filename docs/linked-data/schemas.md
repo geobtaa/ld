@@ -1,5 +1,7 @@
 # Schemas
 
+{% include-markdown "includes/wip.md" %}
+
 JSON Schemas provide structural validation for linked data, ensuring data quality and consistency across the GeoBTAA ecosystem.
 
 ## Overview

@@ -1,5 +1,7 @@
 # Authentication (API Keys)
 
+{% include-markdown "includes/wip.md" %}
+
 The API uses simple **apiKey** authentication. Clients **MUST** supply a valid key via one of:
 
 HTTPS header (preferred):

@@ -1,5 +1,7 @@
 # Model Context Protocol (MCP)
 
+{% include-markdown "includes/wip.md" %}
+
 TODO — Explore FastAPI’s MCP add-on for conformity
 
 The OpenGeoMetadata API supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-06-18), a formal specification for declaring the processing and behavioral context of an API response. MCP enables generic clients, validators, and AI agents to understand how to interpret metadata records and response payloads in a consistent, machine-readable way.

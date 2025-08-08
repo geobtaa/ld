@@ -1,5 +1,7 @@
 # Rate Limiting Recommendations
 
+{% include-markdown "includes/wip.md" %}
+
 Servers **MUST** protect shared resources. The following sane defaults are **RECOMMENDED** and **MAY** be adjusted per deployment:
 
 * **Burst:** 100 requests in any 10‑second window  

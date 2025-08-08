@@ -1,5 +1,7 @@
 # Contexts
 
+{% include-markdown "includes/wip.md" %}
+
 JSON-LD contexts provide mappings between terms used in JSON documents and IRIs. They are essential for creating interoperable linked data.
 
 ## Overview

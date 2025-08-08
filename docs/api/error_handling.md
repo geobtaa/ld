@@ -1,5 +1,7 @@
 # Error Handling
 
+{% include-markdown "includes/wip.md" %}
+
 Errors **MUST** return a JSON object with `type`, `title`, `status`, and `detail` properties.
 
 ```json

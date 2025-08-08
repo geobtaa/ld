@@ -1,5 +1,7 @@
 # GeoBTAA API Specification
 
+{% include-markdown "includes/wip.md" %}
+
 **Version:** 0.1.0-pre-alpha   **Status:** *DRAFT*   **Release Date:** 2025‑08‑04
 
 ## Editors

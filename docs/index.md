@@ -1,5 +1,7 @@
 # GeoBTAA API & Linked Data
 
+{% include-markdown "includes/wip.md" %}
+
 Welcome to the GeoBTAA API & Linked Data repository. This comprehensive platform provides both a RESTful API for geospatial metadata discovery and a collection of linked data assets for the Big Ten Academic Alliance (BTAA) geospatial data infrastructure.
 
 ## Overview
@@ -21,8 +23,7 @@ A collection of semantic web resources that provide standardized data models, vo
 
 **Available Assets:**
 - **Contexts** - JSON-LD context files for data modeling
-- **Vocabularies** - Controlled vocabularies and taxonomies  
-- **Ontologies** - Semantic models and relationships
+- **Profiles** - JSON-LD data profiles and specifications
 - **Schemas** - JSON Schema definitions for validation
 
 ## Quick Start

@@ -1,5 +1,7 @@
 # Metadata
 
+{% include-markdown "includes/wip.md" %}
+
 ## OGM Aardvark
 
 [OGM Aardvark](https://opengeometadata.org/ogm-aardvark/) ([https://opengeometadata.org/ogm-aardvark](https://opengeometadata.org/ogm-aardvark)) is a lightweight metadata profile for geospatial discovery. Every resource is a single JSON object that **MUST** include the following required properties:
