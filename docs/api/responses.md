@@ -81,7 +81,7 @@ GET /api/v1/resource/91663ad7f1444494900f7e1cf063bfe5
 }
 ```
 
-### 8.2.1 META block
+### META block
 
 The META block MAY contain these potential user interface component entries (see 8.5):
 
