@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "wgs84": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "geobtaa": "https://geobtaa.org/ontology#",
+    "dc": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spatialCoverage": {
+      "@id": "geobtaa:spatialCoverage",
+      "@type": "@id"
+    },
+    "temporalCoverage": {
+      "@id": "geobtaa:temporalCoverage",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "coordinateSystem": {
+      "@id": "geobtaa:coordinateSystem",
+      "@type": "@id"
+    },
+    "projection": {
+      "@id": "geobtaa:projection",
+      "@type": "@id"
+    }
+  }
+} 
