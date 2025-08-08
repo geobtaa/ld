@@ -69,6 +69,18 @@ Example response (abridged):
 | `id` | string | ✔️ | Canonical record ID |
 | `fields` | string (CSV) |  | Subset of fields to include |
 
+## Resource OGM Viewer Retrieval
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/viewer` | Returns the Aardvark record presented in the OGM Viewer. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+
 ## List Resources
 
 | Method | Path | Notes |
