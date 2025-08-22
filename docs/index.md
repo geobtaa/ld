@@ -8,7 +8,11 @@ Welcome to the GeoBTAA API and Linked Data homepage. This comprehensive platform
 
 The GeoBTAA API platform consists of two primary components: 1) the [**GeoBTAA API**](#geobtaa-api) and 2) our [**Linked Data Assets**](#linked-data-assets)
 
-![Strategic Technology Plan](images/strategic-tech-plan.png)
+![GeoBTAA API Architecture](images/geobtaa_api_architecture.png)
+
+### BTAA API Presentation
+
+Review a slide deck from the original presentation. [Google Slides - BTAA Geodata API](https://docs.google.com/presentation/d/12hdRyqzwQKk2WJXBXg8soNNSMSWIYH3rSlx52X5XMro/edit?usp=sharing)
 
 ### **GeoBTAA API**
 A read-only, OpenGeoMetadata API-compliant web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN's GeoBTAA extended-OGM Aardvark schema.
@@ -52,6 +56,10 @@ A collection of semantic web resources that provide standardized data models and
 
 ## Use Cases
 
+<div class="grid" markdown>
+
+<div class="cell" markdown>
+
 ### **Academic Libraries**
 - Power geospatial discovery interfaces, like the BTAA Geoportal
 - Integrate with existing library systems
@@ -62,6 +70,10 @@ A collection of semantic web resources that provide standardized data models and
 - Access structured geospatial data
 - Build reproducible research pipelines
 
+</div>
+
+<div class="cell" markdown>
+
 ### **Developers**
 - Create GIS applications and plugins
 - Build search and discovery tools
@@ -71,6 +83,27 @@ A collection of semantic web resources that provide standardized data models and
 - Standardized metadata formats
 - Ensure interoperability
 - Improve data discoverability
+
+</div>
+
+</div>
+
+## Example API Integrations
+
+### BTAA Geoportal (New React Frontend)
+A prototype React frontend was created to display the feature parity of the new backend API with GeoBlacklight.
+
+![BTAA Geoportal - API Backend, React Frontend](images/btaa_geoportal_react.png)
+
+### QGIS Plugin
+A prototype QGIS Plugin was developed to display the potential to reuse and integrate GeoBTAA data directly into the tools GIS researchers use on a daily basis.
+
+![QGIS Plugin](images/qgis_plugin.png)
+
+### Claude Desktop (MCP Integration)
+A proof-of-concept integration into Claude Desktop displays the potential for integrating GeoBTAA resources into cutting-edge AI/LLM research tools.
+
+![Claude Desktop - MCP Integration](images/claude_desktop.png)
 
 ## Getting Started
 
