@@ -1,5 +1,5 @@
 site_name: GeoBTAA API &amp; Linked Data
-site_description: "GeoBTAA API and linked data assets: contexts, vocabularies, ontologies, etc."
+site_description: "GeoBTAA API and linked data assets: contexts, profiles, schemas, etc."
 copyright: "&copy; 2025 GeoBTAA"
 repo_url: https://github.com/geobtaa/ld
 
