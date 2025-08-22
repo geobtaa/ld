@@ -238,4 +238,5 @@ Profiles are versioned and may evolve over time:
 ## Related Documentation
 
 - [Contexts](contexts.md) - JSON-LD context definitions
+- [Profiles](profiles.md) - Profile specifications and constraints
 - [Schemas](schemas.md) - JSON Schema validation

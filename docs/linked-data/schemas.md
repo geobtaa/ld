@@ -205,5 +205,4 @@ Schemas are versioned and may evolve over time:
 
 - [Contexts](contexts.md) - JSON-LD context definitions
 - [Profiles](profiles.md) - Profile specifications and constraints
-- [Vocabularies](vocabularies.md) - Term definitions and usage
-- [Ontologies](ontologies.md) - Semantic relationships and constraints 
+- [Schemas](schemas.md) - JSON Schema validation
