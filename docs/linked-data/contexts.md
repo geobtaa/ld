@@ -19,7 +19,7 @@ Contexts in this repository define:
 
 The primary context for GeoBTAA metadata records, extending the OpenGeoMetadata Aardvark schema with BTAA-specific elements.
 
-**File**: [`contexts/ogm-aardvark-btaa.context.jsonld`](../contexts/ogm-aardvark-btaa.context.jsonld.jsonld)
+**File**: [`contexts/ogm-aardvark-btaa.context.jsonld`](../contexts/ogm-aardvark-btaa.context.jsonld)
 
 This context provides mappings for:
 
