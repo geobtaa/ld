@@ -72,7 +72,7 @@ OGM+GeoBTAA also has a tabular CSV expression with an [Open Knowledge Foundation
 
 ### CSV File Examples
 
-**TODO: Create examples**  
+**TODO: Create BTAA examples**  
 These example CSV files use the GeoBlacklight fixture set.
 
 * Primary — [gbl\_fixtures\_primary.csv](https://github.com/OpenGeoMetadata/opengeometadata.github.io/blob/api/docs/schema/gbl_fixtures_primary.csv)  
@@ -80,7 +80,7 @@ These example CSV files use the GeoBlacklight fixture set.
 
 ### Table Schema Files
 
-**TODO: Create schema files**  
+**TODO: Create BTAA schema files**  
 These files can be used to validate the CSV examples against our CSV schema.
 
 * Primary — [ogm\_aardvark\_primary.schema.json](https://github.com/OpenGeoMetadata/opengeometadata.github.io/blob/api/docs/schema/ogm_aardvark_primary.schema.json)  

@@ -13,48 +13,18 @@ JSON-LD context for search requests:
 | :---- | :---- | :---- |
 | GET | `/service` | Returns API metadata, conformance, contact, and example URLs. |
 
-Example response (abridged):
-
-```json
-{
-  "@context": "https://gin.btaa.org/ns/service-context.jsonld",
-  "id": "https://api.geo.btaa.org/v1/service",
-  "type": "Service",
-  "label": "GeoBTAA API Service Document",
-  "endpoints": {
-    "resources": {
-      "url": "/resources/{id}",
-      "schema": "https://ogm.example.org/schemas/resource.json"
-    },
-    "search": {
-      "url": "/search{?q,page,per_page,sort,callback}",
-      "schema": "https://ogm.example.org/schemas/search-results.json"
-    },
-    "suggestions": {
-      "url": "/suggestions{?q}",
-      "schema": "https://ogm.example.org/schemas/suggestions.json"
-    },
-    "validate": {
-      "url": "/validate",
-      "schema": "https://ogm.example.org/schemas/validate-request.json"
-    }
-  }
-}
-```
-
-**TODO** — Create JSON schemas for the response objects
-
 ## Resource Retrieval
 
 | Method | Path | Notes |
 | :---- | :---- | :---- |
-| GET | `/resources/{id}` | Returns a single Aardvark record, wrapped in JSON:API frontmatter. Supports `fields` param for field projection. |
+| GET | `/resources/{id}` | Returns a single Aardvark record, wrapped in JSON:API frontmatter. |
 
 **Parameters**
 
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource OGM Aardvark Retrieval
 
@@ -275,16 +245,15 @@ POST
 }
 ```
 
-## Suggestions Endpoint
+## Model Context Protocol
 
-Endpoint for autocomplete search suggestions.
+Endpoint for MCP service information and connection details.
 
-### GET /suggestions?q=minn**
+### GET /mcp
 
-| Parameter | Type | Description |
+| Method | Path | Description |
 | :---- | :---- | :---- |
-| `q` | string | Full‑text query (default `*:*`). |
-| `callback` | string | JSONP callback name |
+| GET | `/mcp` | MCP service information and connection details. |
 
 ## Validation Endpoint
 

@@ -7,6 +7,41 @@ JSON-LD context for search responses:
 * Future: https://opengeometadata/api/search/1.0/context/response.json  
 * Draft PR: [Online here](https://raw.githubusercontent.com/OpenGeoMetadata/opengeometadata.github.io/18896025536dae80b632aa5b059fb001d3d42c56/docs/api/search/1.0/context/response.json)
 
+## Service Response
+
+GET /api/v1/service
+
+Example response (abridged):
+
+```json
+{
+  "@context": "https://gin.btaa.org/ns/service-context.jsonld",
+  "id": "https://api.geo.btaa.org/v1/service",
+  "type": "Service",
+  "label": "GeoBTAA API Service Document",
+  "endpoints": {
+    "resources": {
+      "url": "/resources/{id}",
+      "schema": "https://ogm.example.org/schemas/resource.json"
+    },
+    "search": {
+      "url": "/search{?q,page,per_page,sort,callback}",
+      "schema": "https://ogm.example.org/schemas/search-results.json"
+    },
+    "suggestions": {
+      "url": "/suggestions{?q}",
+      "schema": "https://ogm.example.org/schemas/suggestions.json"
+    },
+    "validate": {
+      "url": "/validate",
+      "schema": "https://ogm.example.org/schemas/validate-request.json"
+    }
+  }
+}
+```
+
+**TODO** — Create JSON schemas for the response objects
+
 ## Resource Response
 
 GET /api/v1/resource/91663ad7f1444494900f7e1cf063bfe5
@@ -279,6 +314,58 @@ GET /api/v1/search?q=land+cover
     }
   ]
 }
+```
+
+## Model Component Protocol
+
+GET /api/v1/mcp
+
+```json
+{
+  "name": "ogm-api",
+  "version": "0.1.0",
+  "description": "OpenGeoMetadata API MCP Service",
+  "protocol": "mcp",
+  "transports": [
+    "stdio",
+    "websocket"
+  ],
+  "capabilities": {
+    "tools": [
+      "search_resources",
+      "get_resource",
+      "get_resource_ogm",
+      "list_resources",
+      "get_suggestions",
+      "get_resource_viewer"
+    ]
+  },
+  "connections": {
+    "stdio": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-m",
+        "app.services.mcp_service"
+      ]
+    },
+    "websocket": {
+      "type": "websocket",
+      "url": "/api/v1/mcp/ws"
+    }
+  },
+  "documentation": {
+    "tools": {
+      "search_resources": "Search for geospatial resources using text queries, filters, and sorting options",
+      "get_resource": "Get a single geospatial resource by ID with full metadata and UI enhancements",
+      "get_resource_ogm": "Get just the OpenGeoMetadata Aardvark record for a resource by ID",
+      "list_resources": "List all geospatial resources with pagination",
+      "get_suggestions": "Get search suggestions for autocomplete",
+      "get_resource_viewer": "Get an HTML page with the embedded OGM viewer for a specific resource"
+    }
+  }
+}
+
 ```
 
 ## UI Component Support

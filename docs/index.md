@@ -2,29 +2,37 @@
 
 {% include-markdown "includes/wip.md" %}
 
-Welcome to the GeoBTAA API & Linked Data repository. This comprehensive platform provides both a RESTful API for geospatial metadata discovery and a collection of linked data assets for the Big Ten Academic Alliance (BTAA) geospatial data infrastructure.
+Welcome to the GeoBTAA API and Linked Data homepage. This comprehensive platform provides both a RESTful API for geospatial metadata discovery and a collection of linked data assets for the Big Ten Academic Alliance (BTAA) geospatial data infrastructure.
 
 ## Overview
 
-The GeoBTAA platform consists of two main components:
+The GeoBTAA API platform consists of two primary components: 1) the [**GeoBTAA API**](#geobtaa-api) and 2) our [**Linked Data Assets**](#linked-data-assets)
 
-### 🔌 **GeoBTAA API**
+![Strategic Technology Plan](images/strategic-tech-plan.png)
+
+### **GeoBTAA API**
 A read-only, OpenGeoMetadata API-compliant web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN's GeoBTAA extended-OGM Aardvark schema.
 
-**Key Features:**
-- **RESTful Design** - Predictable, cache-friendly URLs
-- **OpenGeoMetadata Compliance** - Built on open standards
-- **Spatial Search** - Full-text and geospatial discovery
-- **Structured Metadata** - JSON-LD formatted responses
-- **Client-Friendly** - Powers search interfaces and GIS applications
+[GeoBTAA API Documentation :octicons-arrow-right-24:](/api){ .md-button .md-button--primary }
 
-### 🔗 **Linked Data Assets**
-A collection of semantic web resources that provide standardized data models, vocabularies, and schemas for geospatial metadata.
+#### Key Features
+
+* **RESTful Design** - Predictable, cache-friendly URLs
+* **OpenGeoMetadata API Compliance** - Built on open standards
+* **Faceted Spatial Search** - Full-text, faceted geospatial discovery
+* **Structured Metadata** - JSON-LD formatted responses
+* **Client-Friendly** - Powers search interfaces and GIS applications
+
+### **Linked Data Assets**
+A collection of semantic web resources that provide standardized data models and schemas for BTAA geospatial metadata.
+
+[Linked Data Asset Documentation :octicons-arrow-right-24:](/ld){ .md-button .md-button--primary }
 
 **Available Assets:**
-- **Contexts** - JSON-LD context files for data modeling
-- **Profiles** - JSON-LD data profiles and specifications
-- **Schemas** - JSON Schema definitions for validation
+
+* **Contexts** - JSON-LD context files for data modeling
+* **Profiles** - JSON-LD data profiles and specifications
+* **Schemas** - JSON Schema definitions for validation
 
 ## Quick Start
 
@@ -37,54 +45,34 @@ A collection of semantic web resources that provide standardized data models, vo
 
 ### For Linked Data Developers
 
-1. **Browse [Linked Data Assets](linked-data/)** - Contexts, vocabularies, ontologies, and schemas
+1. **Browse [Linked Data Assets](linked-data/)** - Contexts, profiles, and schemas
 2. **Check [Schemas](linked-data/schemas.md)** - JSON Schema validation
 3. **Review [API Reference](linked-data/reference.md)** - Technical specifications
 4. **Explore [Standards](api/standards.md)** - Compliance and interoperability
 
 ## Use Cases
 
-### 🏛️ **Academic Libraries**
-- Power geospatial discovery interfaces
+### **Academic Libraries**
+- Power geospatial discovery interfaces, like the BTAA Geoportal
 - Integrate with existing library systems
 - Provide standardized metadata access
 
-### 🔬 **Researchers**
+### **Researchers**
 - Automate metadata discovery workflows
 - Access structured geospatial data
 - Build reproducible research pipelines
 
-### 🛠️ **Developers**
+### **Developers**
 - Create GIS applications and plugins
 - Build search and discovery tools
 - Integrate with existing geospatial workflows
 
-### 🌐 **Data Providers**
-- Standardize metadata formats
+### **Data Providers**
+- Standardized metadata formats
 - Ensure interoperability
 - Improve data discoverability
 
-## Technical Stack
-
-- **API**: RESTful web service with JSON-LD responses
-- **Schema**: OpenGeoMetadata Aardvark with BTAA extensions
-- **Authentication**: API key-based access
-- **Documentation**: MkDocs with Material theme
-- **Standards**: IIIF-inspired specification structure
-
 ## Getting Started
-
-### Local Development
-
-```bash
-# Install dependencies
-pip install -r requirements-docs.txt
-
-# Start documentation server
-mkdocs serve
-
-# Access at http://localhost:8000
-```
 
 ### API Access
 
@@ -94,19 +82,12 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
      https://api.geobtaa.org/resources
 ```
 
-### Schema Validation
-
-```bash
-# Validate your data against our schemas
-python scripts/validate_schema.py --schema schemas/resource.json --data your-data.json
-```
-
 ## Support & Community
 
+- **Contact Us**: [Feedback](https://geo.btaa.org/feedback)
 - **Issues**: [GitHub Issues](https://github.com/geobtaa/ld/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/geobtaa/ld/discussions)
-- **Email**: geobtaa@lists.illinois.edu
-- **Documentation**: This site and [API Reference](api/index.md)
+- **Documentation**: [API Reference](api/index.md)
 
 ---
 

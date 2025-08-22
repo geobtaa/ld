@@ -2,16 +2,58 @@
 
 {% include-markdown "includes/wip.md" %}
 
-TODO — Explore FastAPI’s MCP add-on for conformity
-
-The OpenGeoMetadata API supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-06-18), a formal specification for declaring the processing and behavioral context of an API response. MCP enables generic clients, validators, and AI agents to understand how to interpret metadata records and response payloads in a consistent, machine-readable way.
+The GeoBTAA API supports [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-06-18), a formal specification for declaring the processing and behavioral context of an API response. MCP enables generic clients, validators, and AI agents to understand how to interpret metadata records and response payloads in a consistent, machine-readable way.
 
 ## Usage
 
-API responses MAY declare one or more MCP \`profile\` URIs to advertise behavior:
+**```GET /api/v1/mcp```**
 
-| {"jsonapi": {  "version": "1.1",  "profile": \[    "https://opengeometadata.org/profile/aardvark",    "https://opengeometadata.org/profile/ui-hints",    "https://opengeometadata.org/profile/mcp/search"  \]} |
-| :---- |
+```
+{
+  "name": "ogm-api",
+  "version": "0.1.0",
+  "description": "OpenGeoMetadata API MCP Service",
+  "protocol": "mcp",
+  "transports": [
+    "stdio",
+    "websocket"
+  ],
+  "capabilities": {
+    "tools": [
+      "search_resources",
+      "get_resource",
+      "get_resource_ogm",
+      "list_resources",
+      "get_suggestions",
+      "get_resource_viewer"
+    ]
+  },
+  "connections": {
+    "stdio": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-m",
+        "app.services.mcp_service"
+      ]
+    },
+    "websocket": {
+      "type": "websocket",
+      "url": "/api/v1/mcp/ws"
+    }
+  },
+  "documentation": {
+    "tools": {
+      "search_resources": "Search for geospatial resources using text queries, filters, and sorting options",
+      "get_resource": "Get a single geospatial resource by ID with full metadata and UI enhancements",
+      "get_resource_ogm": "Get just the OpenGeoMetadata Aardvark record for a resource by ID",
+      "list_resources": "List all geospatial resources with pagination",
+      "get_suggestions": "Get search suggestions for autocomplete",
+      "get_resource_viewer": "Get an HTML page with the embedded OGM viewer for a specific resource"
+    }
+  }
+}
+```
 
 ## Profile URIs
 
@@ -24,8 +66,28 @@ Each URI in the profile array MUST resolve to a valid MCP document, which includ
 
 ## Example MCP Profile (abridged)
 
-| {  "@context": "https://modelcontextprotocol.io/context/v1.jsonld",  "@type": "ModelContextProfile",  "id": "https://opengeometadata.org/profile/mcp/search",  "title": "OGM Search Results Profile",  "description": "Describes the structure and interpretation of search results.",  "appliesTo": "https://opengeometadata.org/api/v1/search",  "features": {    "search": {      "supportsGeoFilters": true,      "maxResults": 1000,      "defaultSort": "relevance"    },    "ui": {      "viewer": true,      "facets": true,      "pagination": true    }  }} |
-| :---- |
+```json
+{
+  "@context": "https://modelcontextprotocol.io/context/v1.jsonld",
+  "@type": "ModelContextProfile",
+  "id": "https://opengeometadata.org/profile/mcp/search",
+  "title": "OGM Search Results Profile",
+  "description": "Describes the structure and interpretation of search results.",
+  "appliesTo": "https://opengeometadata.org/api/v1/search",
+  "features": {
+    "search": {
+      "supportsGeoFilters": true,
+      "maxResults": 1000,
+      "defaultSort": "relevance"
+    },
+    "ui": {
+      "viewer": true,
+      "facets": true,
+      "pagination": true
+    }
+  }
+}
+```
 
 ## Benefits
 
