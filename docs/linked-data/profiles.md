@@ -239,5 +239,3 @@ Profiles are versioned and may evolve over time:
 
 - [Contexts](contexts.md) - JSON-LD context definitions
 - [Schemas](schemas.md) - JSON Schema validation
-- [Vocabularies](vocabularies.md) - Term definitions and usage
-- [Ontologies](ontologies.md) - Semantic relationships and constraints
