@@ -83,10 +83,13 @@ extra:
       link: https://github.com/geobtaa/ld
 
 nav:
-- HOME: 'index.md'
+- 'Home':
+  - 'Overview': index.md
+  - 'GeoBTAA API': api/index.md
+  - 'Linked Data': linked-data/index.md
 
-- API:
-  - 'Home': 'api/index.md'
+- 'API':
+  - 'Overview': 'api/index.md'
   - 'Standards': 'api/standards.md'
   - 'Metadata': 'api/metadata.md'
   - 'Protocol': 'api/protocol.md'
@@ -99,7 +102,8 @@ nav:
   - 'Error Handling': 'api/error_handling.md'
   - 'Security': 'api/security.md'
 
-- Linked Data:
-    - Contexts: 'linked-data/contexts.md'
-    - Profiles: 'linked-data/profiles.md'
-    - Schemas: 'linked-data/schemas.md'
+- 'Linked Data':
+  - 'Overview': 'linked-data/index.md'
+  - 'Contexts': 'linked-data/contexts.md'
+  - 'Profiles': 'linked-data/profiles.md'
+  - 'Schemas': 'linked-data/schemas.md'
