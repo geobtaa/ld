@@ -26,126 +26,140 @@ JSON-LD profiles are specifications that define how to use JSON-LD in a particul
 
 ## Available Profiles
 
-### GeoBTAA Core Profile
+### OGM Aardvark Profile (BTAA-enhanced)
 
-**Purpose**: Basic geospatial resource description for general discovery and cataloging
+**Purpose**: Comprehensive geospatial resource description using the OpenGeoMetadata Aardvark schema with BTAA-specific extensions
 
-**Scope**: Essential metadata for geospatial resources in the GeoBTAA network
+**File**: [`profiles/ogm-aardvark-btaa.profile.jsonld`](../profiles/ogm-aardvark-btaa.profile.jsonld)
+
+**Scope**: JSON:API Resource attributes for maps, datasets, imagery, and collections in the BTAA network
 
 **Key Features**:
-- Dublin Core metadata compliance
-- Basic spatial and temporal coverage
-- Access rights and licensing information
-- Provenance tracking
-- Minimal required fields for discovery
+- OpenGeoMetadata Aardvark schema compliance
+- BTAA-specific custom elements and constraints
+- JSON:API Resource attribute structure
+- Comprehensive validation rules
+- Integration with BTAA GIN infrastructure
 
 **Required Properties**:
-- `@type` - Resource type (Dataset, Service, etc.)
-- `dct:title` - Resource title
-- `dct:description` - Resource description
-- `dct:language` - Language(s) of the resource
-- `dct:accessRights` - Access rights information
-- `dct:license` - License information
-- `dct:spatial` - Spatial coverage
-- `dct:temporal` - Temporal coverage (if applicable)
-- `prov:wasGeneratedBy` - Data generation process
-- `geobtaa:code` - GeoBTAA identifier
+- `id` - Resource identifier
+- `dct_title_s` - Resource title
+- `gbl_resourceClass_sm` - Resource classification
+- `dct_accessRights_s` - Access rights information
+- `gbl_mdVersion_s` - Metadata version
+- `b1g_dct_accrualMethod_s` - Accrual method
+- `b1g_dateAccessioned_s` - Date accessioned
+- `b1g_publication_state_s` - Publication state
+- `b1g_language_sm` - Language information
+
+**Recommended Properties**:
+- `dct_description_sm` - Resource description
+- `dct_language_sm` - Resource language
+- `dct_subject_sm` - Subject terms
+- `dcat_keyword_sm` - Keywords
+- `schema_provider_s` - Provider information
+- `dct_spatial_sm` - Spatial coverage
+- `dct_references_s` - Reference links
+- `dct_format_s` - Format information
+- `dcat_bbox` - Bounding box
+- `locn_geometry` - Geometry (WKT)
+- `b1g_dct_conformsTo_sm` - Conformance statements
+- `b1g_geonames_sm` - GeoNames URIs
+- `b1g_image_ss` - Image URLs
+- `b1g_dct_accrualPeriodicity_s` - Accrual periodicity
+- `b1g_dcat_spatialResolutionInMeters_sm` - Spatial resolution
+- `b1g_dct_provenanceStatement_sm` - Provenance information
+
+**Temporal Coverage Constraints**:
+The profile requires at least one of the following temporal properties:
+- `dct_temporal_sm` - Temporal coverage
+- `gbl_indexYear_im` - Index year
+- `gbl_dateRange_drsim` - Date range
+
+**Cardinality Rules**:
+- Single values: `id`, `dct_title_s`, `dct_accessRights_s`, `gbl_mdVersion_s`, `b1g_dct_accrualMethod_s`, `b1g_dateAccessioned_s`, `b1g_publication_state_s`
+- Multi-values: `gbl_resourceClass_sm`, `b1g_language_sm`
+
+**Pattern Constraints**:
+- `dcat_centroid`: Must match pattern `^-?\d+(\.\d+)?,\s*-?\d+(\.\d+)?$` (latitude,longitude)
+
+**JSON Stringified Properties**:
+- `dct_references_s` - Reference links as JSON string
+- `b1g_access_s` - Access map as JSON string
 
 **Example Usage**:
 
 ```json
 {
-  "@context": "https://raw.githubusercontent.com/geobtaa/ld/main/contexts/core.jsonld",
+  "@context": "https://gin.btaa.org/ld/contexts/ogm-aardvark-btaa.context.jsonld",
   "@type": "Dataset",
-  "dct:title": "Midwest Population Density 2020",
-  "dct:description": "Population density data for the Midwest United States",
-  "dct:language": "en",
-  "dct:accessRights": "Public",
-  "dct:license": "https://creativecommons.org/licenses/by/4.0/",
-  "dct:spatial": "Midwest United States",
-  "dct:temporal": "2020",
-  "prov:wasGeneratedBy": "US Census Bureau",
-  "geobtaa:code": "MIDWEST_POP_2020"
+  "id": "msn-id-1897",
+  "dct_title_s": "Wisconsin Population Density 2020",
+  "dct_description_sm": ["Population density data for Wisconsin counties"],
+  "gbl_resourceClass_sm": ["Datasets"],
+  "dct_accessRights_s": "Public",
+  "gbl_mdVersion_s": "Aardvark",
+  "b1g_dct_accrualMethod_s": "periodic",
+  "b1g_dateAccessioned_s": "2024-01-15",
+  "b1g_publication_state_s": "published",
+  "b1g_language_sm": ["English"],
+  "dct_spatial_sm": ["Wisconsin"],
+  "dcat_bbox": "POLYGON((-92.9 42.5, -86.8 42.5, -86.8 47.1, -92.9 47.1, -92.9 42.5))",
+  "b1g_code_s": "WISC"
 }
 ```
 
-### GeoBTAA Extended Profile
+### OGM UI Hints Profile
 
-**Purpose**: Comprehensive geospatial resource description with detailed metadata
+**Purpose**: Non-RDF UI overlay for BTAA resources carried in JSON:API Resource meta
 
-**Scope**: Full metadata description including technical specifications, quality information, and administrative details
+**File**: [`profiles/ogm-ui.profile.jsonld`](../profiles/ogm-ui.profile.jsonld)
+
+**Scope**: UI-specific metadata for viewer integration and citation display
 
 **Key Features**:
-- All Core Profile requirements
-- Technical specifications and formats
-- Quality and accuracy information
-- Detailed administrative metadata
-- Extended spatial and temporal coverage
-- Related resource links
+- UI component specifications
+- Viewer protocol definitions
+- Citation formatting hints
+- Non-RDF structure for UI integration
 
-**Additional Required Properties**:
-- `dct:format` - File format or media type
-- `dct:creator` - Resource creator
-- `dct:publisher` - Resource publisher
-- `dct:issued` - Publication date
-- `dct:modified` - Last modification date
-- `geo:hasGeometry` - Detailed spatial geometry
-- `geobtaa:qualityScore` - Data quality assessment
-- `geobtaa:updateFrequency` - Update frequency
-- `geobtaa:contactPoint` - Contact information
+**Recommended Properties**:
+- `ui.citation` - Citation display information
+- `ui.viewer.protocol` - Viewer protocol type
+- `ui.viewer.endpoint` - Viewer endpoint URL
+
+**Cardinality Rules**:
+- `ui`: 0..1 (optional)
+- `ui.citation`: 0..1 (optional)
+- `ui.viewer`: 0..1 (optional)
+- `ui.viewer.protocol`: 0..1 (optional)
+- `ui.viewer.endpoint`: 0..1 (optional)
+- `ui.viewer.geometry`: 0..1 (optional)
+
+**Protocol Enums**:
+The `ui.viewer.protocol` property supports these values:
+- `iiif_manifest` - IIIF Manifest
+- `tilejson` - TileJSON
+- `wms` - Web Map Service
+- `wmts` - Web Map Tile Service
+- `xyz` - XYZ Tiles
+- `arcgis` - ArcGIS Services
 
 **Example Usage**:
 
 ```json
 {
-  "@context": "https://raw.githubusercontent.com/geobtaa/ld/main/contexts/core.jsonld",
-  "@type": "Dataset",
-  "dct:title": "Midwest Population Density 2020",
-  "dct:description": "Population density data for the Midwest United States",
-  "dct:language": "en",
-  "dct:accessRights": "Public",
-  "dct:license": "https://creativecommons.org/licenses/by/4.0/",
-  "dct:spatial": "Midwest United States",
-  "dct:temporal": "2020",
-  "dct:format": "application/zip",
-  "dct:creator": "US Census Bureau",
-  "dct:publisher": "GeoBTAA",
-  "dct:issued": "2024-01-15",
-  "dct:modified": "2024-01-15",
-  "geo:hasGeometry": {
-    "@type": "geo:Geometry",
-    "geo:asWKT": "POLYGON((-104.0 36.0, -80.0 36.0, -80.0 49.0, -104.0 49.0, -104.0 36.0))"
-  },
-  "geobtaa:qualityScore": 0.95,
-  "geobtaa:updateFrequency": "Decennial",
-  "geobtaa:contactPoint": "data@geobtaa.org",
-  "prov:wasGeneratedBy": "US Census Bureau",
-  "geobtaa:code": "MIDWEST_POP_2020"
+  "@context": "https://gin.btaa.org/ld/contexts/ogm-ui.context.jsonld",
+  "ui": {
+    "citation": "Wisconsin Population Density 2020. University of Wisconsin-Madison.",
+    "viewer": {
+      "protocol": "wms",
+      "endpoint": "https://geoserver.example.org/geoserver/wms",
+      "geometry": "{\"type\":\"Polygon\",\"coordinates\":[[[-92.9,42.5],[-86.8,42.5],[-86.8,47.1],[-92.9,47.1],[-92.9,42.5]]]}"
+    }
+  }
 }
 ```
-
-### GeoBTAA Harvest Profile
-
-**Purpose**: Optimized for automated harvesting and indexing
-
-**Scope**: Streamlined metadata for efficient harvesting and processing
-
-**Key Features**:
-- Minimal required fields for harvesting
-- Optimized for machine processing
-- Standardized identifiers and URLs
-- Harvest-specific metadata
-
-**Required Properties**:
-- `@id` - Unique resource identifier
-- `@type` - Resource type
-- `dct:title` - Resource title
-- `dct:description` - Resource description
-- `dct:identifier` - Persistent identifier
-- `dct:source` - Source URL for harvesting
-- `dct:modified` - Last modification date
-- `geobtaa:harvestDate` - Date of last harvest
-- `geobtaa:harvestStatus` - Harvest status
 
 ## Profile Validation
 
@@ -172,9 +186,8 @@ def validate_profile(data, profile_name):
 
 Choose the appropriate profile based on your use case:
 
-- **Core Profile**: Basic discovery and cataloging
-- **Extended Profile**: Comprehensive metadata management
-- **Harvest Profile**: Automated harvesting and indexing
+- **OGM Aardvark Profile**: Comprehensive geospatial metadata with BTAA extensions
+- **OGM UI Hints Profile**: UI integration and viewer specifications
 
 ## Implementation Guidelines
 
@@ -188,14 +201,14 @@ Choose the appropriate profile based on your use case:
 
 ### Profile Extensions
 
-Profiles can be extended with additional properties:
+Profiles can be extended with additional properties while maintaining compliance:
 
 ```json
 {
-  "@context": "https://raw.githubusercontent.com/geobtaa/ld/main/contexts/core.jsonld",
+  "@context": "https://gin.btaa.org/ld/contexts/ogm-aardvark-btaa.context.jsonld",
   "@type": "Dataset",
-  "dct:title": "Example Dataset",
-  // ... core profile properties ...
+  "dct_title_s": "Example Dataset",
+  // ... required profile properties ...
   
   // Profile extensions
   "custom:specialProperty": "Custom value",
@@ -211,6 +224,7 @@ Profiles can be extended with additional properties:
 - **Maintain provenance information** for data lineage
 - **Regularly validate** against profile schemas
 - **Document any extensions** to standard profiles
+- **Follow JSON:API conventions** for resource structure
 
 ## Profile Evolution
 

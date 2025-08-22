@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://localhost:8000/schemas/resource.json",
-  "title": "GeoBTAA OGM Aardvark Resource Record",
-  "description": "OpenGeoMetadata Aardvark schema fields with GeoBTAA B1G custom elements.",
+  "$id": "https://gin.btaa.org/ld/schemas/ogm-aardvark-btaa.schema.json",
+  "title": "OGM Aardvark Resource Record for GeoBTAA",
+  "description": "OpenGeoMetadata Aardvark schema fields with BTAA custom elements.",
   "type": "object",
   "properties": {
     "id": { "type": "string" },
@@ -75,5 +75,5 @@
     "b1g_publication_state_s",
     "b1g_language_sm"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 } 
