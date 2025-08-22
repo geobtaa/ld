@@ -333,3 +333,7 @@ If the record is invalid:
 * This endpoint is non-mutating — it does not store or alter the record.  
 * It is useful for QA tools, CI pipelines, and metadata editors.  
 * The server SHOULD use a strict JSON Schema validator and MAY support additional lint rules or MCP profiles.
+
+## TODOs
+
+* Support JSON POSTS in API

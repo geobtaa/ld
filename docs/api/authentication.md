@@ -16,3 +16,7 @@ Keys are provisioned out‑of‑band by the service operator. A new key **MUST**
 | Method | Path | Description |
 | :---- | :---- | :---- |
 | GET | `/keys/self` | Returns metadata about the calling key (plan, quota, issued at, expires at). |
+
+## TODOs
+
+* Add Authentication to API

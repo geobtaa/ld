@@ -15,3 +15,7 @@ The server **SHOULD** convey limits using \[RFC 6585\] `429 Too Many Requests` a
 RateLimit-Limit: 1000  
 RateLimit-Remaining: 253  
 RateLimit-Reset: 42
+
+## TODOs
+
+* Implement Rate Limiting in API

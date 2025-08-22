@@ -10,9 +10,9 @@ The GeoBTAA API supports [Model Context Protocol (MCP)](https://modelcontextprot
 
 ```
 {
-  "name": "ogm-api",
+  "name": "geobtaa-api",
   "version": "0.1.0",
-  "description": "OpenGeoMetadata API MCP Service",
+  "description": "GeoBTAA API MCP Service",
   "protocol": "mcp",
   "transports": [
     "stdio",
@@ -94,3 +94,8 @@ Each URI in the profile array MUST resolve to a valid MCP document, which includ
 * Allows automated agents to reason about what’s returned  
 * Enables consistent UI rendering and schema interpretation  
 * Provides potential future extensibility without API versioning
+
+
+## TODOs
+
+* BTAA Examples instead of OGM Examples

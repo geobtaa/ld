@@ -2,8 +2,6 @@
 
 {% include-markdown "includes/wip.md" %}
 
-**TODO** — This is currently inchoate.
-
 | Name | Type | Default | Description |
 | :---- | :---- | :---- | :---- |
 | `q` | string | `*:*` | Lucene/Solr‑style search string. |
@@ -16,3 +14,7 @@
 | `include_ui` | boolean | true | Include Meta UI section |
 | `callback` | string | — | JSONP callback name |
 | `format` | string | JSON | Format options (JSON, CSV) |
+
+## TODOs
+
+* This is currently inchoate.

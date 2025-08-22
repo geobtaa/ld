@@ -11,4 +11,6 @@
 * HTTP 1.1 or HTTP/2 over TLS 1.2+
 * Minor revisions to this spec will increment the *patch* version (e.g., `1.0.1`) and **MUST NOT** introduce breaking changes.
 
-**TODO: Support HTTP/3**  
+## TODOs
+
+* Support HTTP/3

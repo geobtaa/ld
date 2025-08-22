@@ -2,7 +2,7 @@
 
 {% include-markdown "includes/wip.md" %}
 
-**Version:** 0.1.0-pre-alpha   **Status:** *DRAFT*   **Release Date:** 2025‑08‑04
+**Version:** 0.1.1-pre-alpha   **Status:** *DRAFT*   **Release Date:** 2025‑08‑22
 
 ## Editors
 
@@ -10,18 +10,6 @@
 * Karen Majewicz, Big Ten Academic Alliance  
 
 Copyright © 2025 Editors and Contributors. Published by BTAA GIN under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/), see disclaimer.
-
----
-
-## TODOs
-
-* SEE: [DRAFT OpenGeoMetadata API Pull Request](https://github.com/OpenGeoMetadata/opengeometadata.github.io/pull/114)  
-  * OpenGeoMetadata Website  
-    * API documentation  
-    * JSON-LD profiles  
-* Advanced Search  
-  * Field level searching  
-* Sanity check MCP section
 
 ---
 
@@ -54,15 +42,8 @@ The goal of this specification is to enable consistent client and server impleme
 
 | Version | Date | Notes |
 | :---- | :---- | :---- |
-| 0.1.0 | 2025‑07‑22 | Initial draft. |
-
-## Implementation Notes
-
-* A reference implementation in FastAPI is available at [https://github.com/geobtaa/ogm-api](https://github.com/geobtaa/ogm-api).
-
-* Example code snippets are provided in the repository README.
-
-* JSON‑LD clients may apply the [OGM Aardvark context](https://opengeometadata/context/aardvark-v1.jsonld) ([https://opengeometadata/context/aardvark-v1.jsonld](https://opengeometadata/context/aardvark-v1.jsonld)) to treat field names as compact IRIs.
+| 0.1.1-pre-alpha | 2025‑08‑22 | Broad revisions. |
+| 0.1.0-pre-alpha | 2025‑07‑22 | Initial draft. |
 
 ## Acknowledgements
 

@@ -51,13 +51,9 @@ The obligation for all other fields defined in the canonical Aardvark schema is 
 
 ## JSON Schema
 
-**TODO: JSON Schema for OGM+GeoBTAA**
-
 JSON Schema file for OGM+GeoBTAA resources is maintained at: [https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json](https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json)
 
 ## JSON-LD Context
-
-**TODO: Initial implementation within WIP PR on GIN website:**
 
 JSON-LD context for OGM+BTAA Aardvark records: [DRAFT PR](https://raw.githubusercontent.com/OpenGeoMetadata/opengeometadata.github.io/18896025536dae80b632aa5b059fb001d3d42c56/docs/context/aardvark.json)
 
@@ -72,7 +68,6 @@ OGM+GeoBTAA also has a tabular CSV expression with an [Open Knowledge Foundation
 
 ### CSV File Examples
 
-**TODO: Create BTAA examples**  
 These example CSV files use the GeoBlacklight fixture set.
 
 * Primary — [gbl\_fixtures\_primary.csv](https://github.com/OpenGeoMetadata/opengeometadata.github.io/blob/api/docs/schema/gbl_fixtures_primary.csv)  
@@ -80,8 +75,15 @@ These example CSV files use the GeoBlacklight fixture set.
 
 ### Table Schema Files
 
-**TODO: Create BTAA schema files**  
+
 These files can be used to validate the CSV examples against our CSV schema.
 
 * Primary — [ogm\_aardvark\_primary.schema.json](https://github.com/OpenGeoMetadata/opengeometadata.github.io/blob/api/docs/schema/ogm_aardvark_primary.schema.json)  
 * Distributions — [ogm\_aardvark\_distributions.schema.json](https://github.com/OpenGeoMetadata/opengeometadata.github.io/blob/api/docs/schema/ogm_aardvark_distributions.schema.json)
+
+## TODOs
+
+* JSON Schema for OGM+GeoBTAA
+* JSON-LD Contexts
+* Create BTAA CSV examples
+* Create BTAA schema files  
