@@ -13,11 +13,52 @@ JSON-LD context for search requests:
 | :---- | :---- | :---- |
 | GET | `/service` | Returns API metadata, conformance, contact, and example URLs. |
 
+## List Resources
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/` | Returns a list of Aardvark records. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `page` | integer | Current page of results |
+| `per_page` | integer | Number of results to return |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
 ## Resource Retrieval
 
 | Method | Path | Notes |
 | :---- | :---- | :---- |
 | GET | `/resources/{id}` | Returns a single Aardvark record, wrapped in JSON:API frontmatter. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
+## Resource Distributions
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/distributions` | Returns distribution information for a resource. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
+## Resource Links
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/links` | Returns link information for a resource. |
 
 **Parameters**
 
@@ -39,6 +80,45 @@ JSON-LD context for search requests:
 | `id` | string | ✔️ | Canonical record ID |
 | `fields` | string (CSV) |  | Subset of fields to include |
 
+## Resource Relationships
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/relationships` | Returns relationship information for a resource. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
+## Resource Spatial Facets
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/spatial_facets` | Returns spatial facet information for a resource. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
+## Resource Summaries
+
+| Method | Path | Notes |
+| :---- | :---- | :---- |
+| GET | `/resources/{id}/summaries` | Returns summary information for a resource. |
+
+**Parameters**
+
+| Name | Type | Req? | Description |
+| :---- | :---- | :---- | :---- |
+| `id` | string | ✔️ | Canonical record ID |
+| `fields` | string (CSV) |  | Subset of fields to include |
+
 ## Resource OGM Viewer Retrieval
 
 | Method | Path | Notes |
@@ -50,21 +130,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-
-## List Resources
-
-| Method | Path | Notes |
-| :---- | :---- | :---- |
-| GET | `/resources/` | Returns a list of Aardvark records. |
-
-**Parameters**
-
-| Name | Type | Req? | Description |
-| :---- | :---- | :---- | :---- |
-| `id` | string | ✔️ | Canonical record ID |
-| `page` | integer | Current page of results |
-| `per_page` | integer | Number of results to return |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Search
 
