@@ -1,6 +1,6 @@
 # API Reference
 
-This document provides technical reference information for working with the GeoBTAA Linked Data assets.
+This document provides technical reference information for working with the BTAA Geospatial linked data assets.
 
 ## JSON-LD Contexts
 
@@ -51,11 +51,12 @@ Specialized context for geospatial data.
   "@context": "https://schema.org/",
   "@type": "DefinedTermSet",
   "@id": "https://geobtaa.org/vocabularies/subjects",
-  "name": "GeoBTAA Subject Classification",
+  "name": "BTAA Geospatial Subject Classification",
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",
-      "@id": "https://geobtaa.org/vocabularies/subjects/GEOGRAPHY",
+      "@id": "https://
+      // .org/vocabularies/subjects/GEOGRAPHY",
       "termCode": "GEOGRAPHY",
       "name": "Geography"
     }
@@ -72,7 +73,7 @@ Specialized context for geospatial data.
   "@context": "https://schema.org/",
   "@type": "DefinedTermSet",
   "@id": "https://geobtaa.org/vocabularies/geographic",
-  "name": "GeoBTAA Geographic Classification",
+  "name": "BTAA Geospatial Geographic Classification",
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",

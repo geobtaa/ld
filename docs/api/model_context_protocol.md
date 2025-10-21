@@ -2,7 +2,7 @@
 
 {% include-markdown "includes/wip.md" %}
 
-The GeoBTAA API supports [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-06-18), a formal specification for declaring the processing and behavioral context of an API response. MCP enables generic clients, validators, and AI agents to understand how to interpret metadata records and response payloads in a consistent, machine-readable way.
+The BTAA Geospatial API supports [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-06-18), a formal specification for declaring the processing and behavioral context of an API response. MCP enables generic clients, validators, and AI agents to understand how to interpret metadata records and response payloads in a consistent, machine-readable way.
 
 ## Usage
 
@@ -10,9 +10,9 @@ The GeoBTAA API supports [Model Context Protocol (MCP)](https://modelcontextprot
 
 ```
 {
-  "name": "geobtaa-api",
-  "version": "0.1.0",
-  "description": "GeoBTAA API MCP Service",
+  "name": "btaa-geospatial-api",
+  "version": "0.1.1",
+  "description": "BTAA Geospatial API MCP Service",
   "protocol": "mcp",
   "transports": [
     "stdio",

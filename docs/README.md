@@ -1,6 +1,6 @@
 # Documentation
 
-Testing new action. This directory contains the MkDocs documentation for the GeoBTAA Linked Data repository.
+This directory contains the MkDocs documentation for the BTAA Geospatial API and linked data repository.
 
 ## Structure
 
@@ -24,10 +24,10 @@ mkdocs build
 To serve the documentation locally:
 
 ```bash
-mkdocs serve
+mkdocs serve -a localhost:8001
 ```
 
-The documentation will be available at `http://127.0.0.1:8000/`
+The documentation will be available at `http://127.0.0.1:8001/`
 
 ## Configuration
 

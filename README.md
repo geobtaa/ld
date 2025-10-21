@@ -1,6 +1,6 @@
-# GeoBTAA API &amp; Linked Data
+# BTAA Geospatial API &amp; Linked Data
 
-This site documents the GeoBTAA Metadata API and our linked data assets: contexts, profiles, and schemas.
+This site documents the BTAA Geospatial Metadata API and our linked data assets: contexts, profiles, and schemas.
 
 ## Documentation
 

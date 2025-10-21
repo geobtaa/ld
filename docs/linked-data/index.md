@@ -1,4 +1,4 @@
-# GeoBTAA Linked Data
+# BTAA Geospatial Linked Data
 
 {% include-markdown "includes/wip.md" %}
 
@@ -12,7 +12,7 @@ The Linked Data section of this site describes our linked data assets:
 
 ## Why Linked Data?
 
-These files are the "glue" that makes our GeoBTAA API data dependable and reusable across tools and campuses. 
+These files are the "glue" that makes our BTAA Geospatial API data dependable and reusable across tools and campuses. 
 
 **Contexts** give shared meaning to each field so QGIS, web apps, and aggregators all "speak the same language". When you see `dct_title_s` in our API response, the context tells you it means "Dublin Core title" and points to the official definition.
 

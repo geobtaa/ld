@@ -1,12 +1,12 @@
 # JSON Schemas
 
-This directory contains JSON Schema definitions for validating linked data structures in the GeoBTAA repository.
+This directory contains JSON Schema definitions for validating linked data structures in the BTAA Geospatial repository.
 
 ## Available Schemas
 
-### GeoBTAA OGM Aardvark Resource Record (`resource.json`)
+### BTAA Geospatial OGM Aardvark Resource Record (`resource.json`)
 
-Validates OpenGeoMetadata Aardvark schema fields with GeoBTAA B1G custom elements for geospatial resource records.
+Validates OpenGeoMetadata Aardvark schema fields with BTAA Geospatial custom elements for geospatial resource records.
 
 **Required fields:**
 - `id` - Resource identifier
@@ -17,7 +17,7 @@ Validates OpenGeoMetadata Aardvark schema fields with GeoBTAA B1G custom element
 - `dct_language_sm` - Languages
 - `dct_accessRights_s` - Access rights ("Public" or "Restricted")
 - `dct_license_sm` - License URIs
-- `b1g_code_s` - GeoBTAA custom code
+- `b1g_code_s` - BTAA Geospatial custom code
 - `b1g_dct_accrualMethod_s` - Accrual method
 - `b1g_dateAccessioned_s` - Accession date
 - `b1g_publication_state_s` - Publication state
@@ -25,7 +25,7 @@ Validates OpenGeoMetadata Aardvark schema fields with GeoBTAA B1G custom element
 
 **Key features:**
 - OpenGeoMetadata Aardvark compliance
-- GeoBTAA B1G custom extensions
+- BTAA Geospatial B1G custom extensions
 - Dublin Core metadata validation
 - Spatial and temporal coverage validation
 - Access rights and licensing validation
@@ -74,7 +74,7 @@ These schemas work alongside JSON-LD contexts to provide both structural validat
 {
   "id": "example-resource-001",
   "gbl_mdVersion_s": "Aardvark",
-  "schema_provider_s": "GeoBTAA",
+  "schema_provider_s": "BTAA Geospatial Information Network",
   "dct_title_s": "Midwest Population Density Data",
   "dct_description_sm": ["Population density data for the Midwest United States"],
   "dct_language_sm": ["en"],

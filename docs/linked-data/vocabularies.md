@@ -24,7 +24,7 @@ Standard subject terms for geospatial data:
 {
   "@context": "https://schema.org/",
   "@type": "DefinedTermSet",
-  "name": "GeoBTAA Subject Classification",
+  "name": "BTAA Geospatial Subject Classification",
   "description": "Controlled vocabulary for geospatial data subjects",
   "hasDefinedTerm": [
     {
@@ -51,7 +51,7 @@ Hierarchical geographic classification:
 {
   "@context": "https://schema.org/",
   "@type": "DefinedTermSet",
-  "name": "GeoBTAA Geographic Classification",
+  "name": "BTAA Geospatial Geographic Classification",
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",

@@ -2,7 +2,7 @@
 
 {% include-markdown "includes/wip.md" %}
 
-JSON-LD profiles define specific subsets of vocabularies and constraints for particular use cases, enabling targeted data exchange and validation within the GeoBTAA ecosystem.
+JSON-LD profiles define specific subsets of vocabularies and constraints for particular use cases, enabling targeted data exchange and validation within the BTAA Geospatial ecosystem.
 
 ## Overview
 

@@ -9,7 +9,7 @@
 
 # Ontology declaration
 geobtaa: a owl:Ontology ;
-    rdfs:label "GeoBTAA Core Ontology"@en ;
+    rdfs:label "BTAA Geospatial Core Ontology"@en ;
     rdfs:comment "Core ontology for GeoBTAA linked data assets"@en ;
     owl:versionInfo "1.0.0" ;
     owl:imports <http://www.opengis.net/ont/geosparql> ;

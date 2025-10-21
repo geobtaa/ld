@@ -2,7 +2,7 @@
   "@context": "https://schema.org/",
   "@type": "DefinedTermSet",
   "@id": "https://geobtaa.org/vocabularies/subjects",
-  "name": "GeoBTAA Subject Classification",
+  "name": "BTAA Geospatial Subject Classification",
   "description": "Controlled vocabulary for geospatial data subjects",
   "url": "https://geobtaa.org/vocabularies/subjects",
   "hasDefinedTerm": [

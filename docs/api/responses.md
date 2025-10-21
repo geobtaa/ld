@@ -18,7 +18,7 @@ Example response (abridged):
   "@context": "https://gin.btaa.org/ns/service-context.jsonld",
   "id": "https://api.geo.btaa.org/v1/service",
   "type": "Service",
-  "label": "GeoBTAA API Service Document",
+  "label": "BTAA Geospatial API Service Document",
   "endpoints": {
     "resources": {
       "url": "/resources/{id}",
@@ -322,9 +322,9 @@ GET /api/v1/mcp
 
 ```json
 {
-  "name": "ogm-api",
-  "version": "0.1.0",
-  "description": "OpenGeoMetadata API MCP Service",
+  "name": "btaa-geospatial-api",
+  "version": "0.1.1",
+  "description": "BTAA Geospatial API MCP Service",
   "protocol": "mcp",
   "transports": [
     "stdio",

@@ -4,7 +4,7 @@
 
 ## Terminology
 
-* **Resource** – An individual OpenGeoMetadata Aardvark \+ GeoBTAA Metadata Profile JSON object, document, item, or record.  
+* **Resource** – An individual OpenGeoMetadata Aardvark \+ BTAA Geospatial Metadata Profile JSON object, document, item, or record.  
 * **Service Document** – The JSON description of server capabilities (`/v1/service`).  
 * **Identifier** – The canonical URI‑safe string that uniquely identifies a record.  
 * **Model Context Protocol (MCP)** – A protocol that enables API responses to declare behavioral context using `profile` URIs. These profiles point to machine-readable documents describing how to interpret or interact with the resource, especially useful for generic agents, AI tools, or validators.

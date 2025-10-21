@@ -1,23 +1,23 @@
-# GeoBTAA API & Linked Data
+# BTAA Geospatial API & Linked Data
 
 {% include-markdown "includes/wip.md" %}
 
-Welcome to the GeoBTAA API and Linked Data homepage. This comprehensive platform provides both a RESTful API for geospatial metadata discovery and a collection of linked data assets for the Big Ten Academic Alliance (BTAA) geospatial data infrastructure.
+Welcome to the BTAA Geospatial API and linked data homepage. This comprehensive platform provides both a RESTful API for geospatial metadata discovery and a collection of linked data assets for the Big Ten Academic Alliance (BTAA) geospatial data infrastructure.
 
 ## Overview
 
-The GeoBTAA API platform consists of two primary components: 1) the [**GeoBTAA API**](#geobtaa-api) and 2) our [**Linked Data Assets**](#linked-data-assets)
+The BTAA Geospatial API platform consists of two primary components: 1) the [**BTAA Geospatial API**](#btaa-geospatial-api) and 2) our [**Linked Data Assets**](#linked-data-assets)
 
-![GeoBTAA API Architecture](images/geobtaa_api_architecture.png)
+![BTAA Geospatial API Architecture](images/btaa_geospatial_api_architecture.png)
 
-### BTAA API Presentation
+### BTAA Geospatial API Presentation
 
-Review a slide deck from the original presentation. [Google Slides - BTAA Geodata API](https://docs.google.com/presentation/d/12hdRyqzwQKk2WJXBXg8soNNSMSWIYH3rSlx52X5XMro/edit?usp=sharing)
+Review a slide deck from the original presentation. [Google Slides - BTAA Geospatial API](https://docs.google.com/presentation/d/12hdRyqzwQKk2WJXBXg8soNNSMSWIYH3rSlx52X5XMro/edit?usp=sharing)
 
-### **GeoBTAA API**
-A read-only, OpenGeoMetadata API-compliant web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN's GeoBTAA extended-OGM Aardvark schema.
+### **BTAA Geospatial API**
+A read-only, OpenGeoMetadata API-compliant web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN's extended-OGM Aardvark schema.
 
-[GeoBTAA API Documentation :octicons-arrow-right-24:](/api){ .md-button .md-button--primary }
+[BTAA Geospatial API Documentation :octicons-arrow-right-24:](/api){ .md-button .md-button--primary }
 
 #### Key Features
 

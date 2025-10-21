@@ -1,4 +1,4 @@
-# GeoBTAA API Specification
+# BTAA Geospatial API Specification
 
 {% include-markdown "includes/wip.md" %}
 
@@ -15,7 +15,7 @@ Copyright © 2025 Editors and Contributors. Published by BTAA GIN under the [CC-
 
 ## Introduction
 
-The **GeoBTAA API** is an OpenGeoMetadata API-compliant, read‑only, web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN’s GeoBTAA extended-OGM Aardvark schema ([opengeometadata.org](http://opengeometadata.org) \+ [https://gin.btaa.org/metadata/b1g-custom-elements](https://gin.btaa.org/metadata/b1g-custom-elements)). The API is designed to be an efficient backend, powering search and geospatial discovery, for any frontend technology. 
+The **BTAA Geospatial API** is an OpenGeoMetadata API-compliant, read‑only, web service for programmatically accessing, searching, and retrieving metadata records that conform to the BTAA GIN’s extended-OGM Aardvark schema ([opengeometadata.org](http://opengeometadata.org) \+ [https://gin.btaa.org/metadata/b1g-custom-elements](https://gin.btaa.org/metadata/b1g-custom-elements)). The API is designed to be an efficient backend, powering search and geospatial discovery, for any frontend technology. 
 
 In addition to structured metadata retrieval, the API can drive user interface components — such as field hints, thumbnails, citations, and viewer configurations — that support search, web service previews, and other interactive features within geospatial discovery applications.
 

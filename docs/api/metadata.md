@@ -16,7 +16,7 @@
 | `gbl_mdVersion_s` | string | MUST be `Aardvark`. |
 | [Full OGM Aardvark Schema Definition](https://opengeometadata.org/ogm-aardvark/) |  |  |
 
-## GeoBTAA Metadata Profile 
+## BTAA Geospatial Metadata Profile 
 
 Every resource **MUST** include the following required BTAA properties:
 
@@ -29,9 +29,9 @@ Every resource **MUST** include the following required BTAA properties:
 | `b1g_language_sm` | string | To display the spelled out string (in English) of a language code to users. |
 | [Full BTAA Extension Schema Definition](https://gin.btaa.org/metadata/b1g-custom-elements/) |  |  |
 
-## OGM+GeoBTAA
+## OGM+BTAA Geospatial
 
-Combined OGM+GeoBTAA required attributes:
+Combined OGM+BTAA Geospatial required attributes:
 
 | Field | Type | Description |
 | :---- | :---- | :---- |
@@ -51,7 +51,7 @@ The obligation for all other fields defined in the canonical Aardvark schema is 
 
 ## JSON Schema
 
-JSON Schema file for OGM+GeoBTAA resources is maintained at: [https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json](https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json)
+JSON Schema file for OGM+BTAA Geospatial resources is maintained at: [https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json](https://opengeometadata.org/schema/geoblacklight-schema-aardvark.json)
 
 ## JSON-LD Context
 
@@ -59,7 +59,7 @@ JSON-LD context for OGM+BTAA Aardvark records: [DRAFT PR](https://raw.githubuser
 
 ## CSV
 
-OGM+GeoBTAA also has a tabular CSV expression with an [Open Knowledge Foundation](https://okfn.org/en/) \> [Frictionless Data](https://frictionlessdata.io/) \> [Table Schema](https://datapackage.org/standard/table-schema/) schema definition. Unlike OGM+GeoBTAA Aardvark JSON, OGM+GeoBTAA Aardvark CSV is comprised of two files:
+OGM+BTAA Geospatial also has a tabular CSV expression with an [Open Knowledge Foundation](https://okfn.org/en/) \> [Frictionless Data](https://frictionlessdata.io/) \> [Table Schema](https://datapackage.org/standard/table-schema/) schema definition. Unlike OGM+BTAA Geospatial Aardvark JSON, OGM+BTAA Geospatial Aardvark CSV is comprised of two files:
 
 1. Primary — The primary Aardvark metadata elements (primary.csv)  
 2. Distributions — The dct\_reference\_s elements (distributions.csv)
@@ -83,7 +83,7 @@ These files can be used to validate the CSV examples against our CSV schema.
 
 ## TODOs
 
-* JSON Schema for OGM+GeoBTAA
+* JSON Schema for OGM+BTAA Geospatial
 * JSON-LD Contexts
 * Create BTAA CSV examples
 * Create BTAA schema files  

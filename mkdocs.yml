@@ -1,6 +1,6 @@
-site_name: GeoBTAA API &amp; Linked Data
-site_description: "GeoBTAA API and linked data assets: contexts, profiles, schemas, etc."
-copyright: "&copy; 2025 GeoBTAA"
+site_name: BTAA Geospatial API &amp; Linked Data
+site_description: "BTAA Geospatial API and linked data assets: contexts, profiles, schemas, etc."
+copyright: "&copy; 2025 BTAA GIN"
 repo_url: https://github.com/geobtaa/ld
 
 theme:
@@ -85,11 +85,11 @@ extra:
 nav:
 - 'Home':
   - 'Overview': index.md
-  - 'GeoBTAA API': api/index.md
+  - 'BTAA Geospatial API': api/index.md
   - 'Linked Data': linked-data/index.md
 
 - 'API':
-  - 'Overview': 'api/index.md'
+  - 'Specification': 'api/index.md'
   - 'Standards': 'api/standards.md'
   - 'Metadata': 'api/metadata.md'
   - 'Protocol': 'api/protocol.md'

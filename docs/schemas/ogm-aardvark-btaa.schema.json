@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gin.btaa.org/ld/schemas/ogm-aardvark-btaa.schema.json",
-  "title": "OGM Aardvark Resource Record for GeoBTAA",
+  "title": "OGM+BTAA Geospatial Aardvark Resource Record",
   "description": "OpenGeoMetadata Aardvark schema fields with BTAA custom elements.",
   "type": "object",
   "properties": {

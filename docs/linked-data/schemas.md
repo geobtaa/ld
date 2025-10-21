@@ -2,7 +2,7 @@
 
 {% include-markdown "includes/wip.md" %}
 
-JSON Schemas provide structural validation for linked data, ensuring data quality and consistency across the GeoBTAA ecosystem.
+JSON Schemas provide structural validation for linked data, ensuring data quality and consistency across the BTAA Geospatial ecosystem.
 
 ## Overview
 
@@ -16,7 +16,7 @@ Schemas in this repository define:
 
 ## Available Schemas
 
-### OGM Aardvark Resource Record for GeoBTAA
+### OGM Aardvark Resource Record for BTAA Geospatial
 
 **File**: [`schemas/ogm-aardvark-btaa.schema.json`](../schemas/ogm-aardvark-btaa.schema.json)
 
@@ -139,7 +139,7 @@ def validate_resource(data):
 data = {
     "id": "example-resource-001",
     "gbl_mdVersion_s": "Aardvark",
-    "schema_provider_s": "GeoBTAA",
+    "schema_provider_s": "BTAA Geospatial Information Network",
     "dct_title_s": "Test Dataset",
     "dct_description_sm": ["A test dataset"],
     "dct_language_sm": ["en"],
