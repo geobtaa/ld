@@ -52,7 +52,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource Links
 
@@ -65,7 +64,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource OGM Aardvark Retrieval
 
@@ -91,7 +89,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource Spatial Facets
 
@@ -104,7 +101,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource Summaries
 
@@ -117,7 +113,6 @@ JSON-LD context for search requests:
 | Name | Type | Req? | Description |
 | :---- | :---- | :---- | :---- |
 | `id` | string | ✔️ | Canonical record ID |
-| `fields` | string (CSV) |  | Subset of fields to include |
 
 ## Resource OGM Viewer Retrieval
 
