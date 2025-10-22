@@ -135,19 +135,27 @@ Supports both GET (simple) and POST (complex) forms.
 | Parameter | Type | Description |
 | :---- | :---- | :---- |
 | `q` | string | Full‑text query (default `*:*`). |
+| `fq` | object | Active facet include filters (same as include_filters) |
+| `search_field` | string (CSV) | Search field (all_fields [default], etc.) |
 | `page` | integer | Current page of results |
 | `per_page` | integer | Number of results to return |
 | `sort` | string | Sort option (relevance, year\_desc, year\_asc, title\_asc, title\_desc) |
+| `format` | string | Format option (JSON [default], JSONP) |
 | `callback` | string | JSONP callback name |
-| `include_ui` | boolean | Include UI (default true) |
 | `fields` | string (CSV) | List of fields to return |
 | `facets` | string (CSV) | List of facets to return |
-| `filters` | object | Active facet filters |
-| `format` | string | Format option (JSON, CSV) |
+| `include_filters` | object | Active facet include filters (same as fq) |
+| `exclude_filters` | object | Active facet exclude filters |
+| `meta` | boolean | Include META (default true) |
 
-Example request:
 
-GET /api/v1/search?q=soil+survey\&per\_page=20
+
+Example requests:
+
+* GET /api/v1/search?q=soil+survey\&per\_page=20
+* GET /api/v1/search??q=seattle&include_filters%5Bgbl_resourceClass_sm%5D%5B%5D=Maps
+* GET /api/v1/search?q=seattle&exclude_filters%5Bdct_spatial_sm%5D%5B%5D=Iowa
+* GET /api/v1/search?q=transportation&search_field=dct_subject_sm
 
 ### POST `/search`
 
@@ -156,7 +164,7 @@ Accepts a JSON body with the same parameters plus structured filters.
 ```json
 {
   "q": "land cover",
-  "filters": {
+  "include_filters": {
     "dct_provenance_s": ["Minnesota"],
     "gbl_resourceClass_sm": ["Datasets"]
   },
