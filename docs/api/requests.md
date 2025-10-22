@@ -186,12 +186,12 @@ Support for geospatial queries:
 ### Bounding Box (bbox)
 
 GET /search?q=land+cover\\  
-\&filters\[geo\]\[type\]=bbox\\  
-\&filters\[geo\]\[field\]=location\\  
-\&filters\[geo\]\[top\_left\]\[lat\]=45.1\\  
-\&filters\[geo\]\[top\_left\]\[lon\]=-94.0\\  
-\&filters\[geo\]\[bottom\_right\]\[lat\]=44.7\\  
-\&filters\[geo\]\[bottom\_right\]\[lon\]=-92.9\\  
+\&include_filters\[geo\]\[type\]=bbox\\  
+\&include_filters\[geo\]\[field\]=dcat_centroid\\  
+\&include_filters\[geo\]\[top\_left\]\[lat\]=45.1\\  
+\&include_filters\[geo\]\[top\_left\]\[lon\]=-94.0\\  
+\&include_filters\[geo\]\[bottom\_right\]\[lat\]=44.7\\  
+\&include_filters\[geo\]\[bottom\_right\]\[lon\]=-92.9\\  
 \&limit=50\\  
 \&sort=dct\_temporal\_sm%20desc
 
@@ -203,7 +203,7 @@ POST (`application/json`)
   "filters": {
     "geo": {
       "type": "bbox",
-      "field": "location",
+      "field": "dcat_centroid",
       "top_left":     { "lat": 45.1, "lon": -94.0 },
       "bottom_right": { "lat": 44.7, "lon": -92.9 }
     }
@@ -216,11 +216,11 @@ POST (`application/json`)
 ### Distance-Radius (`distance`)
 
 GET /search?q=land+cover\\  
-\&filters\[geo\]\[type\]=distance\\  
-\&filters\[geo\]\[field\]=location\\  
-\&filters\[geo\]\[center\]\[lat\]=44.98\\  
-\&filters\[geo\]\[center\]\[lon\]=-93.27\\  
-\&filters\[geo\]\[distance\]=25km\\  
+\&include_filters\[geo\]\[type\]=distance\\  
+\&include_filters\[geo\]\[field\]=dcat_centroid\\  
+\&include_filters\[geo\]\[center\]\[lat\]=44.98\\  
+\&include_filters\[geo\]\[center\]\[lon\]=-93.27\\  
+\&include_filters\[geo\]\[distance\]=25km\\  
 \&limit=50
 
 POST
@@ -231,7 +231,7 @@ POST
   "filters": {
     "geo": {
       "type": "distance",
-      "field": "location",
+      "field": "dcat_centroid",
       "center":   { "lat": 44.98, "lon": -93.27 },
       "distance": "25km"
     }
@@ -243,14 +243,14 @@ POST
 ### Polygon (`polygon`)
 
 GET /search?q=land+cover\\  
-\&filters\[geo\]\[type\]=polygon\\  
-\&filters\[geo\]\[field\]=location\\  
-\&filters\[geo\]\[points\]\[0\]\[lat\]=44.9\\  
-\&filters\[geo\]\[points\]\[0\]\[lon\]=-93.4\\  
-\&filters\[geo\]\[points\]\[1\]\[lat\]=45.2\\  
-\&filters\[geo\]\[points\]\[1\]\[lon\]=-93.2\\  
-\&filters\[geo\]\[points\]\[2\]\[lat\]=45.0\\  
-\&filters\[geo\]\[points\]\[2\]\[lon\]=-92.8
+\&include_filters\[geo\]\[type\]=polygon\\  
+\&include_filters\[geo\]\[field\]=locn_geometry\\  
+\&include_filters\[geo\]\[points\]\[0\]\[lat\]=44.9\\  
+\&include_filters\[geo\]\[points\]\[0\]\[lon\]=-93.4\\  
+\&include_filters\[geo\]\[points\]\[1\]\[lat\]=45.2\\  
+\&include_filters\[geo\]\[points\]\[1\]\[lon\]=-93.2\\  
+\&include_filters\[geo\]\[points\]\[2\]\[lat\]=45.0\\  
+\&include_filters\[geo\]\[points\]\[2\]\[lon\]=-92.8
 
 (Add more `points[n]` pairs for polygons with \>3 vertices.)
 
@@ -262,7 +262,7 @@ POST
   "filters": {
     "geo": {
       "type": "polygon",
-      "field": "location",
+      "field": "locn_geometry",
       "points": [
         { "lat": 44.9, "lon": -93.4 },
         { "lat": 45.2, "lon": -93.2 },
@@ -283,14 +283,14 @@ Relation options:
 * contains
 
 GET /search?q=land+cover\\  
-\&filters\[geo\]\[type\]=shape\\  
-\&filters\[geo\]\[field\]=location\\  
-\&filters\[geo\]\[relation\]=within\\  
-\&filters\[geo\]\[shape\]\[type\]=envelope\\  
-\&filters\[geo\]\[shape\]\[coordinates\]\[0\]\[0\]=-94\\  
-\&filters\[geo\]\[shape\]\[coordinates\]\[0\]\[1\]=46\\  
-\&filters\[geo\]\[shape\]\[coordinates\]\[1\]\[0\]=-92\\  
-\&filters\[geo\]\[shape\]\[coordinates\]\[1\]\[1\]=44
+\&include_filters\[geo\]\[type\]=shape\\  
+\&include_filters\[geo\]\[field\]=locn_geometry\\  
+\&include_filters\[geo\]\[relation\]=within\\  
+\&include_filters\[geo\]\[shape\]\[type\]=envelope\\  
+\&include_filters\[geo\]\[shape\]\[coordinates\]\[0\]\[0\]=-94\\  
+\&include_filters\[geo\]\[shape\]\[coordinates\]\[0\]\[1\]=46\\  
+\&include_filters\[geo\]\[shape\]\[coordinates\]\[1\]\[0\]=-92\\  
+\&include_filters\[geo\]\[shape\]\[coordinates\]\[1\]\[1\]=44
 
 (Here the shape is a GeoJSON-style envelope; any GeoJSON geometry works.)
 
@@ -302,7 +302,7 @@ POST
   "filters": {
     "geo": {
       "type": "shape",
-      "field": "location",
+      "field": "locn_geometry",
       "relation": "within",
       "shape": {
         "type": "envelope",
